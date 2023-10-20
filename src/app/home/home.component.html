@@ -1,0 +1,48 @@
+<div>
+    <form action="" [formGroup]="movieform">
+        <div class="container mt-5 ps-4 pb-3 pe-4 pt-4 mb-5 text-black"
+            style="height: auto; width: 60%;background-color:rgba(0, 0, 0, 0.815);border-radius: 15px;">
+            <h1 class="text-center text-white mt-3 mb-3">Search Movie</h1>
+            <input formControlName="title" type="text" class="form-control mt-5" id="mname" placeholder="Enter the movie name"
+                style="height: 40px;width: 100%;">
+            <div class="text-center">
+                <button type="submit" class="btn btn-danger  w-50 container mt-5" (click)="search()">Search</button>
+
+            </div>
+            <div id="result" class="mt-5 container text-white" *ngIf="result">
+                <h1>RESULT</h1>
+                <img class="text-center" src={{poster}} alt="">
+                <table>
+                    <td>
+                        <tr>Title</tr>
+                   
+                        <tr>Release Date</tr>
+                    
+                        <tr>Actors</tr>
+                    
+                        <tr>Plot</tr>
+                    
+                    
+                        <tr>Rating</tr>
+                    </td>
+                    <td>
+                        <tr>{{name}}</tr>
+                   
+                        <tr>{{release}}</tr>
+                    
+                        <tr>{{actors}}</tr>
+                    
+                        <tr>{{plot}}</tr>
+                    
+                        
+                    
+                        <tr>{{rating}}<i class="fa-solid fa-star fa-sm" style="color: #fff700;"></i></tr>
+                    </td>
+                </table>
+        
+        
+            </div>
+        </div>
+
+    </form>
+</div>
